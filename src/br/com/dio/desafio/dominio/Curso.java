@@ -1,5 +1,7 @@
 package br.com.dio.desafio.dominio;
 
+import java.util.Set;
+
 public class Curso extends Conteudo{
 
     private int cargaHoraria;

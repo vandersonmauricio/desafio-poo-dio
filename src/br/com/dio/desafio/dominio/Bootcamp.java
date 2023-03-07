@@ -13,7 +13,15 @@ public class Bootcamp {
     private final LocalDate dataFinal = dataInicial.plusDays(45);
     private Set<Dev> devsInscritos = new HashSet<>();
     private Set<Conteudo> conteudos = new LinkedHashSet<>();
+    private Set<Mentoria> mentoria=new LinkedHashSet<>();
 
+    public Set<Mentoria> getMentoria() {
+        return mentoria;
+    }
+
+    public void setMentoria(Set<Mentoria> mentoria) {
+        this.mentoria = mentoria;
+    }
 
     public String getNome() {
         return nome;
@@ -66,5 +74,18 @@ public class Bootcamp {
     @Override
     public int hashCode() {
         return Objects.hash(nome, descricao, dataInicial, dataFinal, devsInscritos, conteudos);
+    }
+
+    @Override
+    public String toString() {
+        return "Bootcamp{" +
+                "nome='" + nome + '\'' +
+                ", descricao='" + descricao + '\'' +
+                ", dataInicial=" + dataInicial +
+                ", dataFinal=" + dataFinal +
+                ", devsInscritos=" + devsInscritos +
+                ", conteudos=" + conteudos +
+                ", mentoria=" + mentoria +
+                '}';
     }
 }
